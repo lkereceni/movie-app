@@ -1,9 +1,7 @@
 import { SxProps } from "@mui/material";
 
 export const pageBoxStyle: SxProps = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
+  padding: "8px",
   minHeight: "100svh",
   background: "#191817",
 };

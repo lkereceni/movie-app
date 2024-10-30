@@ -29,8 +29,10 @@ export default function RootLayout({
       <AppRouterCacheProvider>
         <ThemeProvider theme={darkTheme}>
           <body className={poppins.variable}>
-            <Sidebar />
-            <Box sx={pageBoxStyle}>{children}</Box>
+            <Box sx={pageBoxStyle}>
+              <Sidebar />
+              {children}
+            </Box>
           </body>
         </ThemeProvider>
       </AppRouterCacheProvider>
