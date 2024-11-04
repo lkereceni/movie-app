@@ -8,6 +8,7 @@ export const sidebarDrawerStyle: SxProps = {
   "& .MuiDrawer-paper": {
     width: drawerWidth,
     boxSizing: "border-box",
+    border: "none",
   },
 };
 

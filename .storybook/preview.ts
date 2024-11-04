@@ -1,4 +1,5 @@
 import type { Preview } from "@storybook/react";
+import withBackgrounds from "@storybook/addon-backgrounds";
 
 const preview: Preview = {
   parameters: {
@@ -7,6 +8,13 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+    backgrounds: {
+      default: "dark",
+      values: [
+        { name: "light", value: "#FFFFFF" },
+        { name: "dark", value: "#191817" },
+      ],
     },
   },
 };

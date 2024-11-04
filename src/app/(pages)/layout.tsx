@@ -6,6 +6,7 @@ import { Box, ThemeProvider } from "@mui/material";
 import darkTheme from "@/theme";
 import Sidebar from "@/components/sidebar/sidebar";
 import { pageBoxStyle } from "./layout-style";
+import Header from "@/components/header/header";
 
 const poppins = Poppins({
   weight: ["300", "400", "600", "700"],
@@ -29,9 +30,12 @@ export default function RootLayout({
       <AppRouterCacheProvider>
         <ThemeProvider theme={darkTheme}>
           <body className={poppins.variable}>
-            <Box sx={pageBoxStyle}>
+            <Box sx={{ display: "flex" }}>
               <Sidebar />
-              {children}
+              <Box sx={pageBoxStyle}>
+                <Header />
+                {children}
+              </Box>
             </Box>
           </body>
         </ThemeProvider>
